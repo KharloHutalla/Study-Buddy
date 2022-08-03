@@ -11,6 +11,35 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'to-do',
+    loadChildren: () => import('./to-do/to-do.module').then( m => m.ToDoPageModule)
+  },
+  {
+    path: 'add-new-task',
+    loadChildren: () => import('./add-new-task/add-new-task.module').then( m => m.AddNewTaskPageModule)
+  },
+  {
+    path: 'home-n',
+    loadChildren: () => import('./home-n/home-n.module').then( m => m.HomeNPageModule)
+  },
+  {
+    path: 'add-note',
+    loadChildren: () => import('./add-note/add-note.module').then( m => m.AddNotePageModule)
+  },
+  {
+    path: 'edit-note',
+    redirectTo: 'add-note',
+    pathMatch: 'full'
+  },
+  {
+    path: 'cards-home',
+    loadChildren: () => import('./cards-home/cards-home.module').then( m => m.CardsHomePageModule)
+  },
+  {
+    path: 'create-flashcard',
+    loadChildren: () => import('./create-flashcard/create-flashcard.module').then( m => m.CreateFlashcardPageModule)
+  },
 ];
 
 @NgModule({

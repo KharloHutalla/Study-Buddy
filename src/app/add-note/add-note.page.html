@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add Notes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+    <ion-col>
+    <ion-card>
+    <ion-textarea auto-grow="true" #textInput (click) = "inputField()" placeholder="Write your notes here..." rows="15" cols="20"></ion-textarea>   
+    </ion-card>
+  </ion-col>
+</ion-row>
+<ion-row class="buttons">
+    <ion-icon name="checkmark-circle" class="icons" (click) = "saveNote()"></ion-icon>
+    <ion-icon name="close-circle" class="icons" [routerLink] = "['/home-n']" style="margin-left: 30px;"></ion-icon>
+    <ion-icon name="trash-outline" class="icons" (click) = "deleteNote()" *ngIf="enableDelete" style="margin-left: 30px;"></ion-icon>
+    </ion-row>
+  </ion-grid>
+</ion-content>

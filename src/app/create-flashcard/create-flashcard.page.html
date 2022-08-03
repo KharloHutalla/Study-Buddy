@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>FLASH CARD
+    <ion-icon name="chevron-back-outline" slot="start" size="large" (click)="dismiss()"></ion-icon>
+ </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="flip-container" ontouchstart="this.classList.toggle('target');">
+    <div class="flipper">
+        <div class="front">
+          <ion-item class="finput">{{frontText}}</ion-item>
+        </div>
+        
+        <div class="back">  
+          <ion-item class="binput">{{backText}}</ion-item>
+        </div>
+    </div>
+</div>
+
+
+<ion-item class="enter_q">
+  <ion-label>Question:</ion-label>
+  <ion-textarea [(ngModel)] ="frontText"></ion-textarea>
+</ion-item>
+
+<ion-item class="enter_q">
+  <ion-label>Answer:</ion-label>
+  <ion-textarea [(ngModel)] ="backText"></ion-textarea>
+</ion-item>
+
+  
+<ion-button color="dark" class="sub" (click)="addCard()">Submit</ion-button>
+
+</ion-content>

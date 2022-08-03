@@ -1,3 +1,9 @@
+*{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+ion-content{
+  --background: #DDDDDD;
+}
 #container {
   text-align: center;
 
@@ -25,3 +31,33 @@
 #container a {
   text-decoration: none;
 }
+ion-card{
+  height: 150px;
+  padding-top:50px ;
+  padding-bottom: 20px;
+  background:#444444;
+}
+.head{
+  --background: #EEEEEE;
+}
+ion-icon{
+  padding-left: 20px;
+  font-size: 50px;
+  position: relative;
+}
+ion-item{
+  --background: transparent;
+}
+ion-button{
+  padding-left: 20px;
+  width: 250px;
+  font-weight: 680;
+  color: #EEEEEE;
+  --ion-color-primary: #CA3E47;
+  --ion-color-primary-shade: #8c3036;
+ 
+}
+ion-icon{
+  color:#EEEEEE;
+}
+

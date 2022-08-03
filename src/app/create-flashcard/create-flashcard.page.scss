@@ -1,0 +1,100 @@
+
+.flip-container {
+	perspective: 1500px;
+	margin-left: 100px;
+	margin-top: 40px;
+}
+
+.flip-container:target .flipper, .flip-container.target .flipper, .flip-container.flip .flipper {
+	transform: rotateY(-180deg);
+}
+
+.flip-container, .front, .back, .flipper{
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 60px;
+}
+
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+.front, .back {
+	backface-visibility: hidden;
+	border-radius: 20px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding-top: 30px;
+}
+
+.front {
+	z-index: 2;
+    background-color: #C4DFAA;
+	text-align: center;
+}
+
+.back {
+	transform: rotateY(-180deg);
+    background-color: #B4E197;
+	text-align: center;
+}
+
+.sub{
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 150px;
+  margin-top: 15px;
+  color: black;
+}
+
+.addNew{
+	text-align: center;
+	margin-top: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	margin-right: 10px;
+	margin-top:20px;
+    margin-left: 140px;
+    margin-bottom: 50px;
+}
+
+.notif{
+	margin-top: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	text-align: center;
+	font-size: large;
+	color: #000;	
+}
+
+.finput{
+	padding-top: 30px;
+	text-align: center;
+	--ion-background-color: #C4DFAA;
+	font-size: x-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.binput{
+	padding-top: 30px;
+	text-align: center;
+	--ion-background-color: #B4E197;
+	font-size: x-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ion-content{
+    --ion-background-color: #fff;
+}
+
+ion-toolbar{
+	text-align: center;
+	font-size: x-large;
+	font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;	
+}

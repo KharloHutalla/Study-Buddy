@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-item lines="none">
+      <ion-label style="font-weight:800;font-size:1.5em;">
+        My FlashCards
+      </ion-label>
+      <ion-icon  name="chevron-back-outline" slot="start" size="medium" [routerLink]="['/home']" ></ion-icon>
+    </ion-item>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <app-flash-card *ngFor = "let item of questions;">
+      <div class="flash-card-front">
+       <ion-row class="delete"><ion-icon name="close-circle" class="i-delete" (click)="delete()" ></ion-icon></ion-row>
+       <ion-row class="front-text">{{item.itemQuestion}}</ion-row>  
+      </div>
+
+      <div class="flash-card-back">
+        <ion-row class="back-text">{{item.itemAnswer}}</ion-row>
+      </div>
+    
+  </app-flash-card>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="dark" (click)="addCard()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  
+</ion-content>

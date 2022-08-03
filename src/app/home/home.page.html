@@ -1,20 +1,35 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<ion-header>
+  <ion-toolbar class="head">
+    <ion-item lines="none">
+      <ion-label style="font-weight: 880;font-size:1.5em; text-align: center; color:#444444">
+        Study Buddy
+      </ion-label>
+
+    </ion-item>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <br>
+  
+    <ion-card class="notes">
+      <ion-row>
+        <ion-icon name="create"></ion-icon>
+        <ion-button [routerLink]="['/home-n']">My Notes</ion-button>
+      </ion-row>
+    </ion-card>
+ 
+    <ion-card class="to-do">
+      <ion-row>
+        <ion-icon name="today"></ion-icon>
+        <ion-button class="to-do" (click)="todopage()">My To Do List</ion-button>
+      </ion-row>
+    </ion-card>
+ 
+    <ion-card class="flash">
+      <ion-row>
+        <ion-icon name="albums"></ion-icon>
+        <ion-button [routerLink]="['/cards-home']">My Flashcards</ion-button>
+      </ion-row>
+    </ion-card>
 </ion-content>
