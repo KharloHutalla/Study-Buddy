@@ -3,6 +3,7 @@ import { ModalController } from '@ionic/angular';
 import { AlertController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { CreateFlashcardPage } from '../create-flashcard/create-flashcard.page';
+import { FlashcardService } from '../flashcard.service';
 
 @Component({
   selector: 'app-cards-home',
@@ -11,7 +12,9 @@ import { CreateFlashcardPage } from '../create-flashcard/create-flashcard.page';
 })
 export class CardsHomePage implements OnInit {
   questions = []
-  constructor(public modalctrl:ModalController, private route: Router, public alertController: AlertController) { }
+  constructor(public modalctrl:ModalController, private route: Router, public flashcardService:FlashcardService) { 
+    this.getllAllCard()
+  }
   
   async addCard() {
     const modal = await this.modalctrl.create({
@@ -19,22 +22,31 @@ export class CardsHomePage implements OnInit {
     })
 
     modal.onDidDismiss().then(newcardObj =>{
-      console.log(newcardObj.data);
+      this.getllAllCard()
+      //console.log(newcardObj.data);
 
-      if(newcardObj.data === undefined){
-      }
+     // if(newcardObj.data === undefined){
+     // }
 
-      else{
-        this.questions.push(newcardObj.data)
-      }
+     // else{
+     //   this.questions.push(newcardObj.data)
+     // }
+
     })
 
     return await modal.present()
 
   }
 
-  delete(index){
-    this.questions.splice(index,1)
+  getllAllCard(){
+    this.questions = this.flashcardService.getAllCards()
+    console.log(this.flashcardService.getAllCards())
+  }
+
+
+  delete(key){
+    this.flashcardService.deleteCard(key)
+    this.getllAllCard()
   }
 
   noInput(){

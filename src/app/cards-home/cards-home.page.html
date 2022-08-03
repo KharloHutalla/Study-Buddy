@@ -13,12 +13,12 @@
 <ion-content>
   <app-flash-card *ngFor = "let item of questions;">
       <div class="flash-card-front">
-       <ion-row class="delete"><ion-icon name="close-circle" class="i-delete" (click)="delete()" ></ion-icon></ion-row>
-       <ion-row class="front-text">{{item.itemQuestion}}</ion-row>  
+       <ion-row class="delete"><ion-icon name="close-circle" class="i-delete" (click)="delete(item.key)" ></ion-icon></ion-row>
+       <ion-row class="front-text">{{item.value.itemQuestion}}</ion-row>  
       </div>
 
       <div class="flash-card-back">
-        <ion-row class="back-text">{{item.itemAnswer}}</ion-row>
+        <ion-row class="back-text">{{item.value.itemAnswer}}</ion-row>
       </div>
     
   </app-flash-card>
