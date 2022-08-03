@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
+  today: number= Date.now()
   constructor(private route: Router) {}
  
   todopage(){
