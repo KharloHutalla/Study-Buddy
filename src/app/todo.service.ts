@@ -17,7 +17,9 @@ export class TodoService {
     this.storage.remove(key)
   }
 
-  updateTask(){
+  updateTask(key, newValue){
+    this.storage.set(key, newValue)
+    this.getAllTasks()
 
   }
 

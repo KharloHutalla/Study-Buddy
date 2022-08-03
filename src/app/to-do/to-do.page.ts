@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 import { TodoService } from '../todo.service';
 import { IonicStorageModule } from '@ionic/storage-angular';
+import { EditTaskPage } from '../edit-task/edit-task.page';
 
 @Component({
   selector: 'app-to-do',
@@ -58,8 +59,17 @@ export class ToDoPage implements OnInit {
     //this.todoList.splice(index,1)
   }
 
-  async complete(index){
+  async edit(selectedTask){
+    const modal = await this.modalCtrl.create({
+      component: EditTaskPage,
+      componentProps: {task: selectedTask}
+    })
 
+    modal.onDidDismiss().then(() =>{
+      this.getAllTask()
+    }) 
+
+    return await modal.present()
   }
 
   home(){

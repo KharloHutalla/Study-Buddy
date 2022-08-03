@@ -34,7 +34,7 @@ export class AddNewTaskPage implements OnInit {
                           itemDueDate:this.taskDate, 
                           itemPriority:this.taskPriority, 
                           itemCategory:this.taskCategory})
-    let uid = this.taskName + "hi"
+    let uid = this.taskName + ".ORG"
     
     if(uid){
       await this.todoService.addTask(uid,this.taskObject)

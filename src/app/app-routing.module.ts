@@ -40,6 +40,10 @@ const routes: Routes = [
     path: 'create-flashcard',
     loadChildren: () => import('./create-flashcard/create-flashcard.module').then( m => m.CreateFlashcardPageModule)
   },
+  {
+    path: 'edit-task',
+    loadChildren: () => import('./edit-task/edit-task.module').then( m => m.EditTaskPageModule)
+  },
 ];
 
 @NgModule({

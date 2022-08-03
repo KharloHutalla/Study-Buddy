@@ -24,14 +24,9 @@ export class CardsHomePage implements OnInit {
     modal.onDidDismiss().then(newcardObj =>{
       //this.questions.push(newcardObj.data)
       //console.log(newcardObj.data);
-
-    if(!newcardObj){
-      console.log("wait lang")
-       
-     }
-   else{
+   
     this.questions.push(newcardObj.data)
-     }
+     
 
     })
 
