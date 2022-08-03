@@ -44,7 +44,14 @@ export class ToDoPage implements OnInit {
     //console.log(this.todoService.getAllTasks())
   }
 
-  delete(key){
+ async delete(key){
+    const alert = await this.alertController.create({
+      header: 'Greate Job!',
+      subHeader: 'Your task has been completed.',
+      message: 'On to the next task.',
+      buttons: ['OK']
+    });
+    await alert.present();
     //console.log(key)
     this.todoService.deleteTask(key)
     this.getAllTask()
@@ -52,16 +59,7 @@ export class ToDoPage implements OnInit {
   }
 
   async complete(index){
-    const alert = await this.alertController.create({
-      header: 'Greate Job!',
-      subHeader: 'Your task has been completed.',
-      message: 'On to the next task.',
-      buttons: ['OK']
-    });
 
-    await alert.present();
-
-    this.todoList.splice(index,1)
   }
 
   home(){

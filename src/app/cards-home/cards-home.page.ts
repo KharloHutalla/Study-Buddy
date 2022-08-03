@@ -13,7 +13,7 @@ import { FlashcardService } from '../flashcard.service';
 export class CardsHomePage implements OnInit {
   questions = []
   constructor(public modalctrl:ModalController, private route: Router, public flashcardService:FlashcardService) { 
-    this.getllAllCard()
+    //this.getllAllCard()
   }
   
   async addCard() {
@@ -22,15 +22,16 @@ export class CardsHomePage implements OnInit {
     })
 
     modal.onDidDismiss().then(newcardObj =>{
-      this.getllAllCard()
+      //this.questions.push(newcardObj.data)
       //console.log(newcardObj.data);
 
-     // if(newcardObj.data === undefined){
-     // }
-
-     // else{
-     //   this.questions.push(newcardObj.data)
-     // }
+    if(!newcardObj){
+      console.log("wait lang")
+       
+     }
+   else{
+    this.questions.push(newcardObj.data)
+     }
 
     })
 
@@ -38,20 +39,19 @@ export class CardsHomePage implements OnInit {
 
   }
 
-  getllAllCard(){
+ /**  getllAllCard(){
     this.questions = this.flashcardService.getAllCards()
     //console.log(this.flashcardService.getAllCards())
-  }
+  }*/
 
 
-  delete(key){
-    this.flashcardService.deleteCard(key)
-    this.getllAllCard()
+  delete(index){
+    this.questions.splice(index,1)
+
+    /**  this.flashcardService.deleteCard(key)
+    this.getllAllCard()*/
   }
 
-  noInput(){
-    return this.questions === undefined || this.questions === null;
-  }
 
 
   ngOnInit() {

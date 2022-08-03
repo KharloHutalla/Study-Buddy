@@ -29,14 +29,14 @@
 
     <ion-row>
 
-      <ion-item>
-        <ion-icon name="checkmark-outline" (click)="complete()"></ion-icon>
-        <p>Complete</p>
+      <ion-item lines="none">
+        <ion-icon name="create-outline" (click)="complete()"></ion-icon>
+        <p>Edit</p>
       </ion-item>
 
-      <ion-item button (click)="delete(item.key)">
-        <ion-icon name="trash-outline"></ion-icon>
-        <p>Remove</p>
+      <ion-item button  lines="none">
+        <ion-icon name="checkmark-outline"></ion-icon>
+        <p (click)="delete(item.key)" >Complete</p>
       </ion-item>
 
     </ion-row>

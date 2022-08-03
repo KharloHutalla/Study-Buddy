@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { element } from 'protractor';
 import { FlashcardService } from '../flashcard.service';
 
 @Component({
@@ -19,8 +20,13 @@ export class CreateFlashcardPage implements OnInit {
   ngOnInit() {
   }
   async dismiss() {
+    if(this.cardObj){
+      await this.modalCtrl.dismiss(this.cardObj)
+    }else{
+      await this.modalCtrl.dismiss()
+    }
 
-    await this.modalCtrl.dismiss(this.cardObj)
+    
   }
 
   async addCard(){
@@ -29,17 +35,16 @@ export class CreateFlashcardPage implements OnInit {
       itemAnswer:this.backText
     })
     
-    let uid = this.frontText + this.backText
+      this.dismiss()
+    }
+    
+  }
+
+
+ /**let uid = this.frontText + this.backText
 
     if(uid){
       await this.flashcardService.addCard(uid, this.cardObj)
     }else{
       console.log("cant add task")
-    }
-
-
-    this.dismiss()
-  }
-
-}
-
+    }*/

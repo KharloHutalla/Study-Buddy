@@ -5,19 +5,19 @@ import { Storage } from '@ionic/storage-angular';
   providedIn: 'root'
 })
 export class FlashcardService {
+  private _storage: Storage;
 
-  constructor(private storage: Storage) { 
+  constructor(private storage1: Storage) { 
     this.init()
   }
 
-
   addCard(key, value){
-    this.storage.set(key, value)
+    this._storage?.set(key, value)
   }
 
   getAllCards(){
     let cards: any=[]
-    this.storage.forEach((key, value, index) => {
+    this._storage?.forEach((key, value, index) => {
       cards.push({'key':value, 'value':key})
         console.log(value);
       });
@@ -25,11 +25,13 @@ export class FlashcardService {
   }
 
   deleteCard(key){
-    this.storage.remove(key)
+    this._storage?.remove(key)
   }
 
   async init(){
-    await this.storage.create()
+    const storage1 = await this.storage1.create()
+    this._storage= storage1;
+
    }
  
 }

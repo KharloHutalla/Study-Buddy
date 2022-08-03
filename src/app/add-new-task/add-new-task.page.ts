@@ -21,7 +21,6 @@ export class AddNewTaskPage implements OnInit {
   ngOnInit() {
   }
   async dismiss(){
-    
       await this.modalCtrl.dismiss(this.taskObject)
     
   }
@@ -35,7 +34,7 @@ export class AddNewTaskPage implements OnInit {
                           itemDueDate:this.taskDate, 
                           itemPriority:this.taskPriority, 
                           itemCategory:this.taskCategory})
-    let uid = this.taskName + this.taskDate
+    let uid = this.taskName + "hi"
     
     if(uid){
       await this.todoService.addTask(uid,this.taskObject)
