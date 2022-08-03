@@ -41,7 +41,7 @@ export class ToDoPage implements OnInit {
   getAllTask(){
     this.todoList =this.todoService.getAllTasks()
 
-    console.log(this.todoService.getAllTasks())
+    //console.log(this.todoService.getAllTasks())
   }
 
   delete(key){

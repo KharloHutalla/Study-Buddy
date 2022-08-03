@@ -12,7 +12,7 @@ export class CreateFlashcardPage implements OnInit {
   frontText
   backText
 
-  cardObj = {}
+  cardObj
 
   constructor(public modalCtrl:ModalController ,public flashcardService: FlashcardService) { }
 

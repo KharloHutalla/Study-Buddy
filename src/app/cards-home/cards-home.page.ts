@@ -40,7 +40,7 @@ export class CardsHomePage implements OnInit {
 
   getllAllCard(){
     this.questions = this.flashcardService.getAllCards()
-    console.log(this.flashcardService.getAllCards())
+    //console.log(this.flashcardService.getAllCards())
   }
 
 

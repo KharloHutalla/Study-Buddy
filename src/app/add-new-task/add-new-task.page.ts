@@ -15,7 +15,7 @@ export class AddNewTaskPage implements OnInit {
   taskPriority
   taskCategory
 
-  taskObject = {}
+  taskObject
   constructor(public modalCtrl:ModalController, public todoService:TodoService) { }
 
   ngOnInit() {
