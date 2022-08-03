@@ -1,0 +1,7 @@
+{
+  "name": "StudyBuddy",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
