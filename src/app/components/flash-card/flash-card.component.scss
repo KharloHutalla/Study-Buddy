@@ -9,8 +9,9 @@
   .front,
   .back {
     width: 90vw;
-    height: 40vh;
+    height: 35vh;
     margin: 20px auto;
+    border-radius: 15px;
   }
   /* flip speed goes here */
   .flipper {
@@ -21,8 +22,10 @@
   /* hide back of pane during swap */
   .front,
   .back {
-   
-    background-color: #ecf0f1;
+    color:white;
+    font-size: large;
+    font-weight: 500 ;
+    background-color: #CA3E47;
     backface-visibility: hidden;
     -webkit-box-shadow: 0px 8px 4px -4px rgba(163, 163, 163, 0.25);
     -moz-box-shadow: 0px 8px 4px -4px rgba(163, 163, 163, 0.25);

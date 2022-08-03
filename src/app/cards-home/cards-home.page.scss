@@ -1,14 +1,17 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
 .front-text{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 75px;
+    padding-top: 50px;
 }
 .back-text{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 125px;
+    padding-top: 105px;
 }
 .delete{
     padding-top: 20px;
@@ -18,3 +21,10 @@
     font-size: 35px;
 }
 
+.fab-btn{
+    --background:#444444;
+    --ion-color-primary-shade: #504f4f;
+}
+ion-content{
+    --background:#DDDDDD;
+  }

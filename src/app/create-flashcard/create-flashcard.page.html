@@ -8,27 +8,25 @@
   <div class="flip-container" ontouchstart="this.classList.toggle('target');">
     <div class="flipper">
         <div class="front">
-          <ion-item class="finput">{{frontText}}</ion-item>
+          <ion-label class="finput" lines="none">{{frontText}}</ion-label>
         </div>
         
         <div class="back">  
-          <ion-item class="binput">{{backText}}</ion-item>
+          <ion-label class="binput" lines="none">{{backText}}</ion-label>
         </div>
     </div>
 </div>
 
 
-<ion-item class="enter_q">
-  <ion-label>Question:</ion-label>
-  <ion-textarea [(ngModel)] ="frontText"></ion-textarea>
-</ion-item>
-
-<ion-item class="enter_q">
-  <ion-label>Answer:</ion-label>
-  <ion-textarea [(ngModel)] ="backText"></ion-textarea>
-</ion-item>
+  <ion-row>
+    <ion-textarea  [(ngModel)] ="frontText" placeholder="Question:" rows="2"></ion-textarea>
+  </ion-row>
+  <ion-row>
+    <ion-textarea [(ngModel)] ="backText" placeholder="Answer:" rows="2" ></ion-textarea>
+  </ion-row>
+  
 
   
-<ion-button color="dark" class="sub" (click)="addCard()">Submit</ion-button>
+<ion-button  (click)="addCard()" >Add Card</ion-button>
 
 </ion-content>

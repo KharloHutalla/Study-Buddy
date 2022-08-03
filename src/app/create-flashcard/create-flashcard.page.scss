@@ -11,12 +11,13 @@
 
 .flip-container, .front, .back, .flipper{
     width: 300px;
-    height: 300px;
+    height: 250px;
     border-radius: 15px;
 	align-items: center;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 60px;
+	margin-bottom: 40px;
+	
 }
 
 .flipper {
@@ -31,18 +32,17 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	padding-top: 30px;
+	padding-top: 110px;
+	background-color: #CA3E47;
 }
 
 .front {
 	z-index: 2;
-    background-color: #C4DFAA;
 	text-align: center;
 }
 
 .back {
 	transform: rotateY(-180deg);
-    background-color: #B4E197;
 	text-align: center;
 }
 
@@ -64,26 +64,19 @@
     margin-bottom: 50px;
 }
 
-.notif{
-	margin-top: 40px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	text-align: center;
-	font-size: large;
-	color: #000;	
-}
-
 .finput{
-	padding-top: 30px;
-	text-align: center;
-	--ion-background-color: #C4DFAA;
+	
+	align-items: center;
+    justify-content: center;
+	--ion-background-color: transparent;
 	font-size: x-large;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .binput{
-	padding-top: 30px;
-	text-align: center;
-	--ion-background-color: #B4E197;
+	margin-top: 200px;
+	align-items: center;
+	--ion-background-color: transparent;
 	font-size: x-large;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -98,3 +91,28 @@ ion-toolbar{
 	font-weight: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;	
 }
+ion-button{
+	margin-left: 60px;
+	margin-top: 20px;
+	width: 250px;
+	font-weight: 680;
+	color: #EEEEEE;
+	--ion-color-primary: #CA3E47;
+	--ion-color-primary-shade: #8c3036;
+}
+ion-textarea{
+	border-style: groove;
+	background-color:#888484 ;
+	border-width: 2px;
+	height: 40px;
+	padding-top: 10px;
+	padding-bottom: 50px;
+	text-align: center;
+	border-radius: 10px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 15px;
+}
+ion-content{
+    --background:#DDDDDD;
+  }
